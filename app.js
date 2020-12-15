@@ -17,6 +17,8 @@ mongoose
 
 // movies route 
 app.use('/api/movies', movies)
+
+
 app.get("/", (req, res) => res.send("Hello World"));
 
 // middleware
