@@ -2,9 +2,9 @@ const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: "./otb.jsx",
+  entry: "./movie_search.jsx",
   output: {
-    path: path.resolve(__dirname, "../app", "assets", "javascripts"),
+    path: path.resolve(__dirname, "../static", "javascripts"),
     filename: "bundle.js",
   },
   module: {
@@ -20,8 +20,8 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        test: /\.(s*)css$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },

@@ -23,6 +23,8 @@ app.use('/api/movies', movies)
 app.get('/', function(req, res) {
   res.render('index.html')
 })
+
+app.use( '/', express.static( __dirname + '/static'))
 // middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
