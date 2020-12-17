@@ -1,4 +1,4 @@
-import { SET_CURRENT_OTB_SAMPLES } from "../actions/current_otb_sample_actions"
+import { SET_CURRENT_OTB_SAMPLES } from "../actions/current_otb_sample_history_actions"
 
 const currentOTBSamplesReducer = (state = {}, action) => {
   Object.freeze(state);

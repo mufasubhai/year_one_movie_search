@@ -98,11 +98,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _components_modal_modal_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/modal/modal.jsx */ "./components/modal/modal.jsx");
-/* harmony import */ var _components_main_page_main_page_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/main_page/main_page_container */ "./components/main_page/main_page_container.js");
-/* harmony import */ var _src_styles_app_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./src/styles/app.css */ "./src/styles/app.css");
-/* harmony import */ var _src_styles_appStyles_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./src/styles/appStyles.scss */ "./src/styles/appStyles.scss");
-
+/* harmony import */ var _components_main_page_main_page_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/main_page/main_page_container */ "./components/main_page/main_page_container.js");
+/* harmony import */ var _src_styles_app_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/styles/app.css */ "./src/styles/app.css");
+/* harmony import */ var _src_styles_appStyles_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./src/styles/appStyles.scss */ "./src/styles/appStyles.scss");
 
 
 
@@ -113,10 +111,10 @@ __webpack_require__.r(__webpack_exports__);
 function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_modal_modal_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["HashRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["HashRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/",
-    component: _components_main_page_main_page_container__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _components_main_page_main_page_container__WEBPACK_IMPORTED_MODULE_2__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     render: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
@@ -130,30 +128,22 @@ function App() {
 
 /***/ }),
 
-/***/ "./actions/modal_actions.js":
-/*!**********************************!*\
-  !*** ./actions/modal_actions.js ***!
-  \**********************************/
-/*! exports provided: OPEN_MODAL, CLOSE_MODAL, openModal, closeModal */
+/***/ "./actions/current_otb_sample_history_actions.js":
+/*!*******************************************************!*\
+  !*** ./actions/current_otb_sample_history_actions.js ***!
+  \*******************************************************/
+/*! exports provided: SET_CURRENT_OTB_SAMPLE_HISTORIES, setCurrentOTBSampleHistories */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OPEN_MODAL", function() { return OPEN_MODAL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CLOSE_MODAL", function() { return CLOSE_MODAL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openModal", function() { return openModal; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeModal", function() { return closeModal; });
-var OPEN_MODAL = "OPEN_MODAL";
-var CLOSE_MODAL = "CLOSE_MODAL";
-var openModal = function openModal(modal) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_CURRENT_OTB_SAMPLE_HISTORIES", function() { return SET_CURRENT_OTB_SAMPLE_HISTORIES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setCurrentOTBSampleHistories", function() { return setCurrentOTBSampleHistories; });
+var SET_CURRENT_OTB_SAMPLE_HISTORIES = "SET_CURRENT_OTB_SAMPLE_HISTORIES";
+var setCurrentOTBSampleHistories = function setCurrentOTBSampleHistories(currentOTBSampleHistories) {
   return {
-    type: OPEN_MODAL,
-    modal: modal
-  };
-};
-var closeModal = function closeModal() {
-  return {
-    type: CLOSE_MODAL
+    type: SET_CURRENT_OTB_SAMPLE_HISTORIES,
+    currentOTBSampleHistories: currentOTBSampleHistories
   };
 };
 
@@ -185,7 +175,7 @@ var MainPage = function MainPage(props) {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "main_page_container"
-  }, "Welcome to React");
+  }, "Welcome to React ya dummy");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (MainPage);
@@ -222,72 +212,6 @@ var mDTP = function mDTP(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mSTP, mDTP)(_main_page_jsx__WEBPACK_IMPORTED_MODULE_2__["default"]));
-
-/***/ }),
-
-/***/ "./components/modal/modal.jsx":
-/*!************************************!*\
-  !*** ./components/modal/modal.jsx ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/modal_actions */ "./actions/modal_actions.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-
-
- // import FormData from './form_data.jsx';
-
-function Modal(_ref) {
-  var modal = _ref.modal,
-      closeModal = _ref.closeModal;
-
-  if (!modal) {
-    return null;
-  }
-
-  var component;
-  console.log('edit_form_data');
-
-  switch (modal) {
-    case 'edit_form_data':
-      return null;
-      break;
-
-    default:
-      return null;
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal_background",
-    onClick: closeModal
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal_child",
-    onClick: function onClick(e) {
-      return e.stopPropagation();
-    }
-  }, component));
-}
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    modal: state.ui.modal
-  };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    closeModal: function closeModal() {
-      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_1__["closeModal"])());
-    }
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Modal));
 
 /***/ }),
 
@@ -37452,67 +37376,45 @@ module.exports = function(originalModule) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
- // import OTBSamplesReducer from './otb_samples_reducer.js';
-// import OTBSampleHistoriesReducer from './otb_sample_histories_reducer';
-// import currentOTBSamplesReducer from './current_otb_samples_reducer'
-// import currentOTBSampleHistoriesReducer from './current_otb_sample_histories_reducer'
+/* harmony import */ var _movies_reducer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./movies_reducer.js */ "./reducers/movies_reducer.js");
 
-var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({// OTBSamples: OTBSamplesReducer,
-  // OTBSampleHistories: OTBSampleHistoriesReducer,
-  // currentOTBSamples: currentOTBSamplesReducer,
-  // currentOTBSampleHistories: currentOTBSampleHistoriesReducer
+
+var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  movies: _movies_reducer_js__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
 /***/ }),
 
-/***/ "./reducers/errors_reducer.js":
+/***/ "./reducers/movies_reducer.js":
 /*!************************************!*\
-  !*** ./reducers/errors_reducer.js ***!
+  !*** ./reducers/movies_reducer.js ***!
   \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
- // import OTBSamplesErrors from './otb_sample_errors_reducer.js';
-// import OTBSampleHistoriesErrors from './otb_sample_history_errors_reducer.js';
+/* harmony import */ var _actions_current_otb_sample_history_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/current_otb_sample_history_actions */ "./actions/current_otb_sample_history_actions.js");
 
-var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({// OTBSamples: OTBSamplesErrors,
-  // OTBSampleHistories: OTBSampleHistoriesErrors
-});
-/* harmony default export */ __webpack_exports__["default"] = (errorsReducer);
 
-/***/ }),
-
-/***/ "./reducers/modal_reducer.js":
-/*!***********************************!*\
-  !*** ./reducers/modal_reducer.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return modalReducer; });
-/* harmony import */ var _actions_modal_actions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/modal_actions.js */ "./actions/modal_actions.js");
-
-function modalReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+var currentOTBSamplesReducer = function currentOTBSamplesReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
 
   switch (action.type) {
-    case _actions_modal_actions_js__WEBPACK_IMPORTED_MODULE_0__["OPEN_MODAL"]:
-      return action.modal;
-
-    case _actions_modal_actions_js__WEBPACK_IMPORTED_MODULE_0__["CLOSE_MODAL"]:
-      return null;
+    case _actions_current_otb_sample_history_actions__WEBPACK_IMPORTED_MODULE_0__["SET_CURRENT_OTB_SAMPLES"]:
+      return Object.assign({}, state, {
+        currentOTBSamples: action.currentOTBSamples
+      });
 
     default:
       return state;
   }
-}
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (currentOTBSamplesReducer);
 
 /***/ }),
 
@@ -37527,38 +37429,12 @@ function modalReducer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _entities_reducer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./entities_reducer.js */ "./reducers/entities_reducer.js");
-/* harmony import */ var _errors_reducer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./errors_reducer.js */ "./reducers/errors_reducer.js");
-/* harmony import */ var _ui_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ui_reducer */ "./reducers/ui_reducer.js");
-
-
 
 
 var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  entities: _entities_reducer_js__WEBPACK_IMPORTED_MODULE_1__["default"],
-  errors: _errors_reducer_js__WEBPACK_IMPORTED_MODULE_2__["default"],
-  ui: _ui_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]
+  entities: _entities_reducer_js__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
-
-/***/ }),
-
-/***/ "./reducers/ui_reducer.js":
-/*!********************************!*\
-  !*** ./reducers/ui_reducer.js ***!
-  \********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _modal_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal_reducer */ "./reducers/modal_reducer.js");
-
-
-var UIReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  modal: _modal_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
-});
-/* harmony default export */ __webpack_exports__["default"] = (UIReducer);
 
 /***/ }),
 

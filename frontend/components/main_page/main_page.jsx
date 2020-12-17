@@ -19,7 +19,7 @@ let table = true;
     
     return (
             <div className="main_page_container">
-            Welcome to React
+            Welcome to React ya dummy
 
             </div>
         )
